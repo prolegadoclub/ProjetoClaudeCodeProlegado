@@ -1,0 +1,236 @@
+/* =============================================================
+   PROLEGADO DESIGN SYSTEM — TOKENS
+   Versão: 1.0
+   Última atualização: 2026-05-22
+
+   Como usar:
+   - Web (CSS): @import 'tokens.css' no topo do seu CSS global
+   - React Native: replicar manualmente em um theme.ts
+   - Tailwind: usar como extend no tailwind.config.js
+   ============================================================= */
+
+:root {
+  /* -----------------------------------------------------------
+     CORES — BRAND
+     ----------------------------------------------------------- */
+  --prolegado-criatividade: #fd6413;
+  --prolegado-clareza: #fff7ea;
+  --prolegado-constancia: #211d1e;
+
+  /* Variações de superfície (derivadas) */
+  --prolegado-surface-light: #ffffff;
+  --prolegado-surface-dark: #2a2627;
+
+  /* -----------------------------------------------------------
+     CORES — SEMÂNTICAS (harmonizam com laranja, não gritantes)
+     ----------------------------------------------------------- */
+  --prolegado-success: #4a9d5f;
+  --prolegado-error: #c94a3a;
+  --prolegado-warning: #e89b3c;
+  --prolegado-info: #5a7a9d;
+
+  /* -----------------------------------------------------------
+     CORES — TEMÁTICAS (alternam por tema)
+     Por padrão = LIGHT MODE
+     ----------------------------------------------------------- */
+  --color-background: var(--prolegado-clareza);
+  --color-surface: var(--prolegado-surface-light);
+  --color-text-primary: var(--prolegado-constancia);
+  --color-text-secondary: rgba(33, 29, 30, 0.7);
+  --color-text-disabled: rgba(33, 29, 30, 0.4);
+  --color-border: rgba(33, 29, 30, 0.12);
+  --color-border-focus: var(--prolegado-criatividade);
+
+  /* -----------------------------------------------------------
+     TIPOGRAFIA — FAMÍLIAS
+     ----------------------------------------------------------- */
+  --font-display: 'Parabolica', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* -----------------------------------------------------------
+     TIPOGRAFIA — ESCALA (mobile-first)
+     Cada token = font-size / line-height
+     ----------------------------------------------------------- */
+  --text-display-size: 2.5rem;      /* 40px */
+  --text-display-lh: 1.1;
+  --text-h1-size: 1.75rem;          /* 28px */
+  --text-h1-lh: 1.2;
+  --text-h2-size: 1.375rem;         /* 22px */
+  --text-h2-lh: 1.25;
+  --text-h3-size: 1.125rem;         /* 18px */
+  --text-h3-lh: 1.3;
+  --text-button-size: 1rem;         /* 16px */
+  --text-button-lh: 1;
+  --text-body-size: 1rem;           /* 16px */
+  --text-body-lh: 1.5;
+  --text-body-sm-size: 0.875rem;    /* 14px */
+  --text-body-sm-lh: 1.5;
+  --text-caption-size: 0.75rem;     /* 12px */
+  --text-caption-lh: 1.4;
+  --text-number-display-size: 3.5rem; /* 56px */
+  --text-number-display-lh: 1;
+
+  /* -----------------------------------------------------------
+     ESPAÇAMENTO — base 8px
+     ----------------------------------------------------------- */
+  --space-1: 0.25rem;  /* 4px  */
+  --space-2: 0.5rem;   /* 8px  */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+
+  /* -----------------------------------------------------------
+     BORDER RADIUS — curva média (equilíbrio)
+     ----------------------------------------------------------- */
+  --radius-sm: 0.5rem;    /* 8px  — inputs, chips */
+  --radius-md: 0.75rem;   /* 12px — botões, cards pequenos */
+  --radius-lg: 1rem;      /* 16px — cards, modais */
+  --radius-xl: 1.5rem;    /* 24px — featured cards, sheets */
+  --radius-full: 9999px;  /* avatares, pills, badges */
+
+  /* -----------------------------------------------------------
+     SOMBRAS — soft, acolhedoras
+     ----------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(33, 29, 30, 0.04);
+  --shadow-md: 0 4px 12px rgba(33, 29, 30, 0.06);
+  --shadow-lg: 0 8px 24px rgba(33, 29, 30, 0.08);
+  --shadow-orange-glow: 0 4px 20px rgba(253, 100, 19, 0.25);
+
+  /* -----------------------------------------------------------
+     MOTION
+     ----------------------------------------------------------- */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* -----------------------------------------------------------
+     Z-INDEX
+     ----------------------------------------------------------- */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+/* =============================================================
+   DARK MODE
+   Aplicar via [data-theme="dark"] no <html> ou <body>
+   ============================================================= */
+[data-theme="dark"] {
+  --color-background: var(--prolegado-constancia);
+  --color-surface: var(--prolegado-surface-dark);
+  --color-text-primary: var(--prolegado-clareza);
+  --color-text-secondary: rgba(255, 247, 234, 0.7);
+  --color-text-disabled: rgba(255, 247, 234, 0.4);
+  --color-border: rgba(255, 247, 234, 0.12);
+  /* --color-border-focus permanece laranja */
+}
+
+/* =============================================================
+   UTILITY CLASSES (opcional — reutilizáveis em qualquer projeto)
+   ============================================================= */
+
+/* Tipografia */
+.text-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-display-size);
+  line-height: var(--text-display-lh);
+}
+.text-h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h1-size);
+  line-height: var(--text-h1-lh);
+}
+.text-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h2-size);
+  line-height: var(--text-h2-lh);
+}
+.text-h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h3-size);
+  line-height: var(--text-h3-lh);
+}
+.text-button {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-button-size);
+  line-height: var(--text-button-lh);
+}
+.text-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-lh);
+}
+.text-body-sm {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-body-sm-size);
+  line-height: var(--text-body-sm-lh);
+}
+.text-caption {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-lh);
+}
+.text-number-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-number-display-size);
+  line-height: var(--text-number-display-lh);
+}
+
+/* Botão primário pronto */
+.btn-primary {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-button-size);
+  background: var(--prolegado-criatividade);
+  color: var(--prolegado-clareza);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-out-soft);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* Botão secundário */
+.btn-secondary {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-button-size);
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-text-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-out-soft);
+}
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Card padrão */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+}
