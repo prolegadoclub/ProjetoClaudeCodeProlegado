@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$env:PATH = 'C:\\Program Files\\Git\\cmd;' + $env:PATH; $proj = 'c:\\Users\\LENOVO\\Downloads\\ProjetoClaudeCodeProlegado'; $status = git -C $proj status --porcelain; if ($status) { git -C $proj add -A; $ts = Get-Date -Format 'yyyy-MM-dd HH:mm'; git -C $proj commit -m \"auto: update $ts\"; git -C $proj push origin 2>&1 | Out-Null }",
+            "shell": "powershell",
+            "timeout": 30,
+            "statusMessage": "Sincronizando com GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
