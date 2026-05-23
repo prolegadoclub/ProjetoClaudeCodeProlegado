@@ -6,8 +6,13 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import CheckInScreen from './src/screens/CheckInScreen';
+import { NavigationContainer } from '@react-navigation/native';
+
+import { AuthProvider } from './src/context/AuthContext';
+import { DrawerProvider } from './src/context/DrawerContext';
+import RootNavigator from './src/navigation/RootNavigator';
 import { colors } from './src/theme/tokens';
 
 export default function App() {
@@ -16,28 +21,29 @@ export default function App() {
     Inter_500Medium,
     Inter_600SemiBold,
     Inter_700Bold,
-    // Add Parabolica font to assets/fonts/ and uncomment when ready:
+    // Descomente quando adicionar o arquivo em assets/fonts/:
     // 'Parabolica-Bold': require('./assets/fonts/Parabolica-Bold.otf'),
   });
 
   if (!fontsLoaded) {
     return (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: colors.clareza,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <ActivityIndicator size="large" color={colors.criatividade} />
+      <View style={{ flex: 1, backgroundColor: colors.criatividade, alignItems: 'center', justifyContent: 'center' }}>
+        <ActivityIndicator color={colors.clareza} />
       </View>
     );
   }
 
   return (
-    <SafeAreaProvider>
-      <CheckInScreen />
-    </SafeAreaProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <AuthProvider>
+          <DrawerProvider>
+            <NavigationContainer>
+              <RootNavigator />
+            </NavigationContainer>
+          </DrawerProvider>
+        </AuthProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }

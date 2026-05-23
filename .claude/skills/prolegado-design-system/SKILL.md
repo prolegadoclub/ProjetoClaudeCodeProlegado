@@ -61,23 +61,35 @@ The brand uses three named colors with conceptual meaning. Do NOT introduce new 
 
 ### Typography
 
-- **Display / headers / buttons / numbers / impact**: **Parabolica** (Bold 700, Regular 400, Light 300)
-- **Body / paragraphs / descriptions / forms / comments**: **Inter** (load via Google Fonts: 400, 500, 600, 700)
+**Decisão de produto**: o app usa fontes nativas do sistema para toda interface, garantindo sensação familiar e nativa para o usuário. Parabolica é reservada para momentos de marca de alto impacto.
 
-NEVER use any other font family. NEVER swap Parabolica for "similar" fonts (Manrope, Space Grotesk, etc.).
+| Contexto | Fonte | Motivo |
+|---|---|---|
+| Títulos de impacto, botões principais, números grandes, splash | **Parabolica** | Presença de marca |
+| Todo o resto (corpo, formulários, labels, navegação, captions) | **Fonte do sistema** | Sensação nativa, familiar ao usuário |
+
+**Fonte do sistema no React Native:**
+- iOS: San Francisco (SF Pro) — aplicada automaticamente
+- Android: Roboto — aplicada automaticamente
+- Para usar: `fontFamily: undefined` ou simplesmente não especificar fontFamily
+
+**Parabolica** deve ser carregada via `expo-font` usando os arquivos `.ttf` fornecidos pela equipe de design (Jéssica). Não está disponível no Google Fonts.
+
+NUNCA instalar Inter, Manrope, Space Grotesk ou qualquer outra fonte de terceiros para corpo de texto — usar sempre a fonte nativa do sistema.
 
 **Type scale** (mobile-first):
 
 | Token | Size | Line height | Family | Use |
 |---|---|---|---|---|
-| `--text-display` | 40px / 2.5rem | 1.1 | Parabolica Bold | Hero, splash, "Faça Hoje!" moments |
-| `--text-h1` | 28px / 1.75rem | 1.2 | Parabolica Bold | Page titles |
-| `--text-h2` | 22px / 1.375rem | 1.25 | Parabolica Bold | Section headers |
-| `--text-h3` | 18px / 1.125rem | 1.3 | Parabolica Bold | Card titles, subheaders |
-| `--text-button` | 16px / 1rem | 1 | Parabolica Bold (UPPERCASE optional) | Buttons, CTAs |
-| `--text-body` | 16px / 1rem | 1.5 | Inter Regular | Default body |
-| `--text-body-sm` | 14px / 0.875rem | 1.5 | Inter Regular | Secondary body, captions |
-| `--text-caption` | 12px / 0.75rem | 1.4 | Inter Medium | Labels, metadata, timestamps |
+| `--text-display` | 40px / 2.5rem | 1.1 | Parabolica Bold | Splash, hero, "Faça Hoje!" |
+| `--text-h1` | 28px / 1.75rem | 1.2 | Parabolica Bold | Títulos de página |
+| `--text-h2` | 22px / 1.375rem | 1.25 | Parabolica Bold | Headers de seção |
+| `--text-h3` | 18px / 1.125rem | 1.3 | Parabolica Bold | Títulos de card |
+| `--text-button` | 16px / 1rem | 1 | Parabolica Bold | Botões primários e CTAs |
+| `--text-number` | 56px / 3.5rem | 1 | Parabolica Bold | Números grandes (streak, PL Points) |
+| `--text-body` | 16px / 1rem | 1.5 | Sistema | Corpo de texto padrão |
+| `--text-body-sm` | 14px / 0.875rem | 1.5 | Sistema | Texto secundário, captions |
+| `--text-caption` | 12px / 0.75rem | 1.4 | Sistema | Labels, timestamps, metadata |
 | `--text-number-display` | 56px / 3.5rem | 1 | Parabolica Bold | Big numbers (streak, score, points) |
 
 ### Spacing

@@ -43,9 +43,12 @@
 
   /* -----------------------------------------------------------
      TIPOGRAFIA — FAMÍLIAS
+     Parabolica: títulos, botões, números de impacto (carregar via expo-font)
+     Sistema: todo o resto — San Francisco (iOS) e Roboto (Android) automaticamente
+     NÃO instalar Inter ou qualquer outra fonte de terceiros para corpo de texto
      ----------------------------------------------------------- */
   --font-display: 'Parabolica', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-body: system-ui, sans-serif;
 
   /* -----------------------------------------------------------
      TIPOGRAFIA — ESCALA (mobile-first)
