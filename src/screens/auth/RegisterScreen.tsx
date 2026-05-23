@@ -19,7 +19,7 @@ import { supabase } from '../../lib/supabase';
 import { AuthStackParamList } from '../../types/navigation';
 import FormInput from '../../components/FormInput';
 import PrimaryButton from '../../components/PrimaryButton';
-import { colors, fontFamilies, spacing } from '../../theme/tokens';
+import { colors, spacing } from '../../theme/tokens';
 
 type Props = NativeStackScreenProps<AuthStackParamList, 'Register'>;
 
@@ -213,7 +213,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
     lineHeight: 34,
@@ -228,11 +227,9 @@ const styles = StyleSheet.create({
   },
   loginText: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}99`,
   },
   loginLink: {
     color: colors.criatividade,
-    fontFamily: fontFamilies.bodyMedium,
   },
 });

@@ -11,7 +11,7 @@ import {
 import { X } from 'lucide-react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useDrawer } from '../context/DrawerContext';
-import { colors, spacing, radius, fontFamilies, shadows } from '../theme/tokens';
+import { colors, spacing, radius, shadows } from '../theme/tokens';
 
 const PANEL_WIDTH = 280;
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
   },
   panelTitle: {
     fontSize: 18,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
   },
@@ -132,7 +131,6 @@ const styles = StyleSheet.create({
   },
   itemLabel: {
     fontSize: 16,
-    fontFamily: fontFamilies.bodyRegular,
     color: colors.constancia,
   },
 });

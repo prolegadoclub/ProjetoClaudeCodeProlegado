@@ -8,7 +8,7 @@ import {
   StyleProp,
   ViewStyle,
 } from 'react-native';
-import { colors, radius, spacing, fontFamilies, shadows } from '../theme/tokens';
+import { colors, radius, spacing, shadows } from '../theme/tokens';
 
 type Variant = 'primary' | 'secondary' | 'ghost';
 
@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     letterSpacing: 0.3,
   },

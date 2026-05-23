@@ -15,7 +15,7 @@ import { LogOut } from 'lucide-react-native';
 import { supabase } from '../../lib/supabase';
 import { PerfilStackParamList } from '../../types/navigation';
 import PrimaryButton from '../../components/PrimaryButton';
-import { colors, fontFamilies, spacing, radius, shadows } from '../../theme/tokens';
+import { colors, spacing, radius, shadows } from '../../theme/tokens';
 
 type Props = NativeStackScreenProps<PerfilStackParamList, 'Settings'>;
 
@@ -87,14 +87,12 @@ const styles = StyleSheet.create({
   },
   pageTitle: {
     fontSize: 28,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
     lineHeight: 34,
   },
   sectionLabel: {
     fontSize: 11,
-    fontFamily: fontFamilies.bodyMedium,
     color: `${colors.constancia}66`,
     letterSpacing: 1.2,
     marginBottom: spacing.s3,
@@ -113,12 +111,10 @@ const styles = StyleSheet.create({
   },
   rowLabel: {
     fontSize: 15,
-    fontFamily: fontFamilies.bodyRegular,
     color: colors.constancia,
   },
   rowValue: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyMedium,
     color: `${colors.constancia}66`,
   },
   logoutBtn: {
@@ -130,7 +126,6 @@ const styles = StyleSheet.create({
   },
   logoutText: {
     fontSize: 16,
-    fontFamily: fontFamilies.bodyMedium,
     color: colors.error,
   },
 });

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Text, Animated, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { colors, fontFamilies } from '../theme/tokens';
+import { colors } from '../theme/tokens';
 
 interface SplashScreenProps {
   onDone: () => void;
@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
   },
   logo: {
     fontSize: 96,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.clareza,
     lineHeight: 96,

@@ -60,10 +60,3 @@ export const shadows = {
   },
 } as const;
 
-export const fontFamilies = {
-  display: 'Parabolica-Bold',
-  bodyRegular: 'Inter_400Regular',
-  bodyMedium: 'Inter_500Medium',
-  bodySemiBold: 'Inter_600SemiBold',
-  bodyBold: 'Inter_700Bold',
-} as const;

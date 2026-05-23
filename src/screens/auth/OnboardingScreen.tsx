@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { colors, fontFamilies, spacing, radius } from '../../theme/tokens';
+import { colors, spacing, radius } from '../../theme/tokens';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -151,7 +151,6 @@ const styles = StyleSheet.create({
   },
   skipText: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyMedium,
     color: `${colors.constancia}66`,
   },
   slide: {
@@ -170,21 +169,18 @@ const styles = StyleSheet.create({
   },
   iconText: {
     fontSize: 36,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.clareza,
     lineHeight: 40,
   },
   slideTitle: {
     fontSize: 28,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
     lineHeight: 34,
   },
   slideBody: {
     fontSize: 16,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}99`,
     lineHeight: 24,
   },
@@ -215,7 +211,6 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontSize: 16,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.clareza,
     letterSpacing: 0.3,

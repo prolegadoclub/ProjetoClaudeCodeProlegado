@@ -3,7 +3,7 @@ import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Settings } from 'lucide-react-native';
-import { colors, fontFamilies, spacing } from '../../theme/tokens';
+import { colors, spacing } from '../../theme/tokens';
 import { PerfilStackParamList } from '../../types/navigation';
 
 type Nav = NativeStackNavigationProp<PerfilStackParamList, 'Perfil'>;
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 22,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
   },
@@ -47,7 +46,6 @@ const styles = StyleSheet.create({
   },
   settingsLabel: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}99`,
   },
 });

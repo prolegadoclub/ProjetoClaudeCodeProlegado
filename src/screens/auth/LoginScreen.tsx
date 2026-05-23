@@ -19,7 +19,7 @@ import { supabase } from '../../lib/supabase';
 import { AuthStackParamList } from '../../types/navigation';
 import FormInput from '../../components/FormInput';
 import PrimaryButton from '../../components/PrimaryButton';
-import { colors, fontFamilies, spacing, radius } from '../../theme/tokens';
+import { colors, spacing, radius } from '../../theme/tokens';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -177,14 +177,12 @@ const styles = StyleSheet.create({
   },
   logoMark: {
     fontSize: 48,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.criatividade,
     textAlign: 'center',
   },
   title: {
     fontSize: 28,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
     lineHeight: 34,
@@ -198,7 +196,6 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyMedium,
     color: colors.criatividade,
   },
   divider: {
@@ -214,7 +211,6 @@ const styles = StyleSheet.create({
   },
   dividerText: {
     fontSize: 12,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}66`,
   },
   oauthBtn: {
@@ -227,11 +223,9 @@ const styles = StyleSheet.create({
   },
   registerText: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}99`,
   },
   registerLink: {
     color: colors.criatividade,
-    fontFamily: fontFamilies.bodyMedium,
   },
 });

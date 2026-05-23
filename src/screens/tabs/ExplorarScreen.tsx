@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { colors, fontFamilies } from '../../theme/tokens';
+import { colors } from '../../theme/tokens';
 
 export default function ExplorarScreen() {
   return (
@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 22,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
   },

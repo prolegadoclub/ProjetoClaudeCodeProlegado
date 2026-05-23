@@ -13,7 +13,7 @@ import {
   PerfilStackParamList,
 } from '../types/navigation';
 import { useDrawer } from '../context/DrawerContext';
-import { colors, fontFamilies, shadows, spacing } from '../theme/tokens';
+import { colors, shadows, spacing } from '../theme/tokens';
 import DrawerMenu from './DrawerMenu';
 
 import FeedScreen from '../screens/tabs/FeedScreen';
@@ -190,7 +190,6 @@ const styles = StyleSheet.create({
   },
   tabLabel: {
     fontSize: 10,
-    fontFamily: fontFamilies.bodyMedium,
     marginTop: 2,
   },
   tabItem: {
@@ -201,7 +200,6 @@ const styles = StyleSheet.create({
 const headerStyles = StyleSheet.create({
   logo: {
     fontSize: 22,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.criatividade,
     paddingLeft: spacing.s4,

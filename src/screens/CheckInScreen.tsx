@@ -12,7 +12,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ArrowLeft, Zap } from 'lucide-react-native';
 import * as Haptics from 'expo-haptics';
 import ConfettiCannon from 'react-native-confetti-cannon';
-import { colors, spacing, radius, shadows, fontFamilies } from '../theme/tokens';
+import { colors, spacing, radius, shadows } from '../theme/tokens';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -255,7 +255,6 @@ const styles = StyleSheet.create({
   },
   labelCaps: {
     fontSize: 12,
-    fontFamily: fontFamilies.bodyMedium,
     letterSpacing: 1.5,
     color: `${colors.constancia}80`,
     marginBottom: spacing.s2,
@@ -263,7 +262,6 @@ const styles = StyleSheet.create({
   challengeTitle: {
     fontSize: 28,
     lineHeight: 34,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
   },
@@ -281,21 +279,18 @@ const styles = StyleSheet.create({
   },
   streakLabel: {
     fontSize: 12,
-    fontFamily: fontFamilies.bodyMedium,
     color: `${colors.constancia}80`,
     letterSpacing: 0.5,
   },
   streakNumber: {
     fontSize: 56,
     lineHeight: 56,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.criatividade,
     marginBottom: spacing.s1,
   },
   streakCaption: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}99`,
   },
   progressTrack: {
@@ -308,7 +303,6 @@ const styles = StyleSheet.create({
   },
   progressLabel: {
     fontSize: 12,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}66`,
   },
   pointsCard: {
@@ -320,7 +314,6 @@ const styles = StyleSheet.create({
   },
   pointsText: {
     fontSize: 14,
-    fontFamily: fontFamilies.bodyMedium,
     color: colors.criatividade,
     textAlign: 'center',
   },
@@ -338,7 +331,6 @@ const styles = StyleSheet.create({
   },
   primaryButtonText: {
     fontSize: 16,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.clareza,
     letterSpacing: 0.5,
@@ -354,13 +346,11 @@ const styles = StyleSheet.create({
   },
   successButtonText: {
     fontSize: 16,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: '#ffffff',
   },
   successButtonSub: {
     fontSize: 12,
-    fontFamily: fontFamilies.bodyRegular,
     color: 'rgba(255,255,255,0.8)',
     marginTop: 4,
   },

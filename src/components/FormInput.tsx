@@ -1,7 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import { View, Text, TextInput, TextInputProps, Pressable, StyleSheet } from 'react-native';
 import { Eye, EyeOff } from 'lucide-react-native';
-import { colors, radius, spacing, fontFamilies } from '../theme/tokens';
+import { colors, radius, spacing } from '../theme/tokens';
 
 interface FormInputProps extends TextInputProps {
   label?: string;
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 12,
-    fontFamily: fontFamilies.bodyMedium,
     color: `${colors.constancia}99`,
     letterSpacing: 0.3,
   },
@@ -67,7 +66,6 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.s3,
     paddingHorizontal: spacing.s4,
     fontSize: 16,
-    fontFamily: fontFamilies.bodyRegular,
     color: colors.constancia,
   },
   eyeBtn: {
@@ -75,7 +73,6 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 12,
-    fontFamily: fontFamilies.bodyRegular,
     color: colors.error,
   },
 });

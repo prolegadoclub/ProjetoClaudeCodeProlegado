@@ -17,7 +17,7 @@ import { supabase } from '../../lib/supabase';
 import { AuthStackParamList } from '../../types/navigation';
 import FormInput from '../../components/FormInput';
 import PrimaryButton from '../../components/PrimaryButton';
-import { colors, fontFamilies, spacing, radius, shadows } from '../../theme/tokens';
+import { colors, spacing, radius, shadows } from '../../theme/tokens';
 
 type Props = NativeStackScreenProps<AuthStackParamList, 'ForgotPassword'>;
 
@@ -121,14 +121,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontFamily: fontFamilies.display,
     fontWeight: '700',
     color: colors.constancia,
     lineHeight: 34,
   },
   subtitle: {
     fontSize: 16,
-    fontFamily: fontFamilies.bodyRegular,
     color: `${colors.constancia}99`,
     lineHeight: 24,
   },
@@ -142,7 +140,6 @@ const styles = StyleSheet.create({
   },
   successText: {
     fontSize: 15,
-    fontFamily: fontFamilies.bodyRegular,
     color: colors.success,
     lineHeight: 22,
   },
